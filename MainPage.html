@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main Page - GachaWebsite</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <main class="main-page">
+        <section class="main-header">
+            <h1>GachaWebsite</h1>
+            <p id="WelcomeMessage"></p>
+            <button id="LogoutButton" type="button">Log Out</button>
+        </section>
+
+        <section class="wheel-wrapper" aria-label="Vòng quay may mắn">
+            <div class="arrow"></div>
+
+            <div class="wheel" id="wheel">
+                <div class="slice slice-1"><span>Ô 1</span></div>
+                <div class="slice slice-2"><span>Ô 2</span></div>
+                <div class="slice slice-3"><span>Ô 3</span></div>
+                <div class="slice slice-4"><span>Ô 4</span></div>
+                <div class="slice slice-5"><span>Ô 5</span></div>
+            </div>
+
+            <button class="center-circle" id="spin-btn" type="button">QUAY</button>
+        </section>
+
+        <nav class="app-list" aria-label="Website list">
+            <a href="./Buyer/index.html">Buyer</a>
+            <a href="./iTube/index.html">iTube</a>
+            <a href="./MusicListener/index.html">MusicListener</a>
+            <a href="./Stream/index.html">Stream</a>
+            <a href="./YourTime/index.html">YourTime</a>
+        </nav>
+    </main>
+
+    <div class="modal-overlay" id="modal-overlay">
+        <div class="modal-box">
+            <button class="close-btn" id="close-modal" type="button" aria-label="Close">&times;</button>
+            <h2>CHÚC MỪNG!</h2>
+            <p>Bạn đã quay vào <span class="prize-text" id="prize-display">Ô 1</span>!</p>
+            <p class="sub-text">Phần thưởng của bạn: [Tên phần thưởng]!<br>Vui lòng làm theo hướng dẫn.</p>
+            <button class="claim-btn" id="claim-btn" type="button">NHẬN QUÀ</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

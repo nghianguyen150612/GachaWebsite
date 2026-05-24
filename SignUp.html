@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GachaWebsite</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+<!-- SIGN UP FORM -->
+    <form id="SignUpForm">
+        <h2>Sign Up</h2>
+
+        <div>
+            <label for="Name">Name:</label>
+            <input type="text" id="Name" name="Name" required>
+        </div>
+
+        <div>
+            <label for="Username">Username:</label>
+            <input type="text" id="Username" name="Username" required>
+        </div>
+
+        <div>
+            <label for="Email">Email:</label>
+            <input type="email" id="Email" name="Email" required>
+        </div>
+
+        <div>
+            <label for="Password">Password:</label>
+            <input type="password" id="Password" name="Password" required>
+        </div>
+
+        <div>
+            <label for="ConfirmPassword">Confirm Password:</label>
+            <input type="password" id="ConfirmPassword" name="ConfirmPassword" required>
+        </div>
+
+        <button type="submit">Sign Up</button>
+    </form>
+
+    <p id="FormError" aria-live="polite"></p>
+
+    <script src="script.js"></script>
+</body>
+</html>
