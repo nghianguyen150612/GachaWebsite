@@ -45,7 +45,7 @@ button:disabled {
 .main-header {
   width: 100%;
   display: grid;
-  grid-template-columns: 1fr auto;
+  grid-template-columns: 1fr auto auto;
   gap: 8px 16px;
   align-items: center;
 }
@@ -53,6 +53,30 @@ button:disabled {
 .main-header h1,
 .main-header p {
   margin: 0;
+}
+
+.header-actions {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.report-link {
+  min-height: 40px;
+  padding: 10px 14px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  background: #eef2ff;
+  color: #1d4ed8;
+  font: inherit;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.report-link:hover {
+  background: #dbeafe;
 }
 
 .wheel-wrapper {
@@ -218,6 +242,11 @@ button:disabled {
 @media (max-width: 560px) {
   .main-header {
     grid-template-columns: 1fr;
+  }
+
+  .header-actions {
+    width: 100%;
+    flex-wrap: wrap;
   }
 
   .wheel {
