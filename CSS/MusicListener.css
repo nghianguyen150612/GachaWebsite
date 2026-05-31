@@ -5,6 +5,7 @@
 body {
   min-height: 100vh;
   margin: 0;
+  padding: 24px;
   display: grid;
   place-items: center;
   font-family: Arial, sans-serif;
@@ -12,19 +13,136 @@ body {
   color: #1f2933;
 }
 
-main {
-  width: min(720px, calc(100vw - 32px));
-  padding: 24px;
+.music-app {
+  width: min(760px, 100%);
+  display: grid;
+  gap: 18px;
+}
+
+.app-header,
+.player-panel,
+.track-list {
   background: #ffffff;
   border: 1px solid #bedcff;
   border-radius: 8px;
+  padding: 24px;
 }
 
-h1 {
-  margin: 0 0 8px;
+.app-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
 }
 
+h1,
+h2,
 p {
   margin: 0;
+}
+
+.app-header p {
+  margin-top: 6px;
   color: #52616f;
+}
+
+.app-header a {
+  min-height: 40px;
+  padding: 10px 14px;
+  border-radius: 6px;
+  background: #eef2ff;
+  color: #1d4ed8;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.player-panel {
+  display: grid;
+  gap: 20px;
+}
+
+.eyebrow {
+  display: block;
+  margin-bottom: 6px;
+  color: #52616f;
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.controls,
+.progress-row,
+.volume-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+button {
+  min-height: 40px;
+  padding: 10px 14px;
+  border: 0;
+  border-radius: 6px;
+  background: #e5e7eb;
+  color: #1f2933;
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+button.primary {
+  background: #2563eb;
+  color: #ffffff;
+}
+
+input[type="range"] {
+  width: 100%;
+  accent-color: #2563eb;
+}
+
+.progress-row span {
+  min-width: 42px;
+  color: #52616f;
+  font-size: 13px;
+}
+
+.volume-row span {
+  color: #52616f;
+  font-weight: 700;
+}
+
+.track-list {
+  display: grid;
+  gap: 10px;
+}
+
+.track {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  gap: 12px;
+  background: #f8fafc;
+  border: 1px solid #dbeafe;
+}
+
+.track span {
+  color: #52616f;
+}
+
+.track.active {
+  background: #dbeafe;
+  color: #1d4ed8;
+}
+
+@media (max-width: 560px) {
+  body {
+    padding: 16px;
+  }
+
+  .app-header,
+  .controls,
+  .volume-row {
+    align-items: flex-start;
+    flex-direction: column;
+  }
 }
