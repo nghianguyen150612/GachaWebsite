@@ -6,7 +6,6 @@ const wheel = document.querySelector("#wheel");
 const spinBtn = document.querySelector("#spin-btn");
 const modalOverlay = document.querySelector("#modal-overlay");
 const closeModal = document.querySelector("#close-modal");
-const claimBtn = document.querySelector("#claim-btn");
 const prizeDisplay = document.querySelector("#prize-display");
 const nameInput = document.querySelector("#Name");
 const username = document.querySelector("#Username");
@@ -24,12 +23,37 @@ const CURRENT_USERNAME_KEY = "currentUsername";
 let currentRotation = 0;
 let isSpinning = false;
 
+const SPIN_ROUNDS = 6;
+const SLICE_DEGREE = 72;
+const SPIN_DURATION = 4000;
+const REDIRECT_DELAY = 1200;
+
 const prizeConfig = {
-  "Ô 1": "#ff5722",
-  "Ô 2": "#4caf50",
-  "Ô 3": "#2196f3",
-  "Ô 4": "#9c27b0",
-  "Ô 5": "#ffcd12"
+  1: {
+    label: "Ô 1",
+    color: "#ff5722",
+    url: "./Buyer/index.html"
+  },
+  2: {
+    label: "Ô 2",
+    color: "#4caf50",
+    url: "./iTube/index.html"
+  },
+  3: {
+    label: "Ô 3",
+    color: "#2196f3",
+    url: "./MusicListener/index.html"
+  },
+  4: {
+    label: "Ô 4",
+    color: "#9c27b0",
+    url: "./Stream/index.html"
+  },
+  5: {
+    label: "Ô 5",
+    color: "#ffcd12",
+    url: "./YourTime/index.html"
+  }
 };
 
 if (signUpForm) {
@@ -99,22 +123,29 @@ if (spinBtn && wheel && modalOverlay && prizeDisplay) {
     }
 
     isSpinning = true;
+    spinBtn.disabled = true;
 
-    const randomDegree = Math.floor(Math.random() * 360) + 1800;
-    currentRotation += randomDegree;
+    const prizeNumber = Math.floor(Math.random() * Object.keys(prizeConfig).length) + 1;
+    const prize = prizeConfig[prizeNumber];
+    const currentNormalizedRotation = normalizeDegree(currentRotation);
+    const targetRotation = normalizeDegree(-(prizeNumber - 1) * SLICE_DEGREE);
+    const extraRotation = SPIN_ROUNDS * 360 + normalizeDegree(targetRotation - currentNormalizedRotation);
+
+    currentRotation += extraRotation;
     wheel.style.transform = "rotate(" + currentRotation + "deg)";
 
     setTimeout(function () {
       isSpinning = false;
+      spinBtn.disabled = false;
 
-      const actualDegree = currentRotation % 360;
-      const prizeNumber = Math.floor(((360 - actualDegree) % 360) / 72) + 1;
-      const prize = "Ô " + prizeNumber;
-
-      prizeDisplay.textContent = prize;
-      prizeDisplay.style.color = prizeConfig[prize];
+      prizeDisplay.textContent = prize.label;
+      prizeDisplay.style.color = prize.color;
       modalOverlay.classList.add("active");
-    }, 4000);
+
+      setTimeout(function () {
+        window.location.href = prize.url;
+      }, REDIRECT_DELAY);
+    }, SPIN_DURATION);
   });
 }
 
@@ -124,10 +155,8 @@ if (closeModal && modalOverlay) {
   });
 }
 
-if (claimBtn && modalOverlay) {
-  claimBtn.addEventListener("click", function () {
-    modalOverlay.classList.remove("active");
-  });
+function normalizeDegree(degree) {
+  return ((degree % 360) + 360) % 360;
 }
 
 function showError(message) {

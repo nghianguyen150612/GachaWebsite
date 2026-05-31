@@ -63,8 +63,7 @@ input {
   border-radius: 6px;
 }
 
-button,
-.app-list a {
+button {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -75,8 +74,12 @@ button,
   background: #2563eb;
   color: #ffffff;
   font: inherit;
-  text-decoration: none;
   cursor: pointer;
+}
+
+button:disabled {
+  cursor: wait;
+  opacity: 0.75;
 }
 
 #FormError {
@@ -84,13 +87,6 @@ button,
   margin: 12px 0 0;
   color: #b42318;
   text-align: center;
-}
-
-.app-list {
-  width: 100%;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-  gap: 10px;
 }
 
 .wheel-wrapper {
@@ -279,15 +275,6 @@ button,
   font-size: 13px;
   color: #777777;
   margin-bottom: 20px;
-}
-
-.claim-btn {
-  background-color: #4caf50;
-  box-shadow: 0 4px 10px rgba(76, 175, 80, 0.3);
-}
-
-.claim-btn:hover {
-  background-color: #43a047;
 }
 
 @media (max-width: 560px) {
