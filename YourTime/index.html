@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Windows Clock Clone</title>
+    <link rel="stylesheet" href="../CSS/YourTime.css">
+</head>
+<body>
+
+    <div class="window-container">
+        <aside class="sidebar">
+            <div class="menu-item active" data-target="world-clock-tab">
+                <span class="menu-icon" aria-hidden="true">CLK</span>
+                <span class="menu-label">Local Time</span>
+            </div>
+            <div class="menu-item" data-target="timer-tab">
+                <span class="menu-icon" aria-hidden="true">TMR</span>
+                <span class="menu-label">Timer</span>
+            </div>
+            <div class="menu-item" data-target="stopwatch-tab">
+                <span class="menu-icon" aria-hidden="true">SW</span>
+                <span class="menu-label">Stopwatch</span>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            
+            <section id="world-clock-tab" class="tab-content active">
+                <header class="content-header">
+                    <h2>Local time</h2>
+                </header>
+                <div class="clock-display">
+                    <div class="digital-clock" id="digitalClock">00:00:00</div>
+                    <div class="date-display" id="dateDisplay">Weekday, Month Day, Year</div>
+
+                    <div class="timezone-list">
+                        <div class="timezone-item">
+                            <span class="timezone-icon" aria-hidden="true">NY</span>
+                            <div class="tz-info">
+                                <span class="tz-name">New York, United States</span>
+                                <span class="tz-diff" id="newYorkDiff">Local time</span>
+                            </div>
+                            <div class="tz-time" id="newYorkTime">00:00</div>
+                        </div>
+                        <div class="timezone-item">
+                            <span class="timezone-icon" aria-hidden="true">LDN</span>
+                            <div class="tz-info">
+                                <span class="tz-name">London, United Kingdom</span>
+                                <span class="tz-diff" id="londonDiff">Local time</span>
+                            </div>
+                            <div class="tz-time" id="londonTime">00:00</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="timer-tab" class="tab-content">
+                <header class="content-header">
+                    <h2>Timer</h2>
+                </header>
+                <div class="tab-placeholder">
+                    <div class="timer-circle" id="timerDisplay">5:00</div>
+                    <div class="control-buttons">
+                        <button class="win-btn primary" id="startTimerBtn">Start</button>
+                        <button class="win-btn" id="resetTimerBtn">Reset</button>
+                    </div>
+                </div>
+            </section>
+
+            <section id="stopwatch-tab" class="tab-content">
+                <header class="content-header">
+                    <h2>Stopwatch</h2>
+                </header>
+                <div class="tab-placeholder">
+                    <div class="stopwatch-display" id="stopwatchDisplay">00:00.00</div>
+                    <div class="control-buttons">
+                        <button class="win-btn primary" id="startStopwatchBtn">Start</button>
+                        <button class="win-btn" id="resetStopwatchBtn">Reset</button>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

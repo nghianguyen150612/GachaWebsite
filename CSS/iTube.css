@@ -1,0 +1,30 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  display: grid;
+  place-items: center;
+  font-family: Arial, sans-serif;
+  background: #f3fff4;
+  color: #1f2933;
+}
+
+main {
+  width: min(720px, calc(100vw - 32px));
+  padding: 24px;
+  background: #ffffff;
+  border: 1px solid #bce8c0;
+  border-radius: 8px;
+}
+
+h1 {
+  margin: 0 0 8px;
+}
+
+p {
+  margin: 0;
+  color: #52616f;
+}
