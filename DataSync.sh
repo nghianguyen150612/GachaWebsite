@@ -6,27 +6,33 @@ cd "$(dirname "$0")"
 
 if ! git rev-parse --is-inside-work-tree >/dev/null 2>&1; then
     echo
-    echo "[ERROR] Thu muc nay khong phai Git repository."
-    read -rp "Nhan Enter de thoat..."
+    echo "[ERROR] Folder isnt a github repo"
+    read -rp "Enter to exit"
     exit 1
 fi
 
-commitmsg="Auto Sync $(date '+%Y-%m-%d %H-%M')"
+repo_name=$(basename "$(git rev-parse --show-toplevel)")
+current_time=$(date '+%d/%m/%Y %H:%M:%S')
+commitmsg="[$repo_name] $current_time"
 
 echo
-echo "===== GIT ADD ====="
+echo "========================================"
+echo "Repository : $repo_name"
+echo "Time       : $current_time"
+echo "========================================"
+
 git add .
 
-echo
-echo "===== GIT COMMIT ====="
-git commit -m "$commitmsg" || true
+git commit -m "$commitmsg"
 
-echo
-echo "===== GIT PUSH ====="
 git push
 
 echo
-echo "===== DONE ====="
-echo "Commit Message: $commitmsg"
+echo "========================================"
+echo "DATA SYNC COMPLETE"
+echo "Repository : $repo_name"
+echo "Commit     : $commitmsg"
+echo "Time       : $(date '+%d/%m/%Y %H:%M:%S')"
+echo "========================================"
 
-read -rp "Nhan Enter de thoat..."
+read -rp "Enter to exit"
