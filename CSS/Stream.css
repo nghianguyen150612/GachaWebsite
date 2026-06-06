@@ -24,7 +24,26 @@ h1 {
   margin: 0 0 8px;
 }
 
+h2 {
+  margin: 22px 0 10px;
+  font-size: 18px;
+}
+
 p {
   margin: 0;
   color: #52616f;
+}
+
+ul {
+  margin: 0 0 20px;
+  padding-left: 20px;
+}
+
+li {
+  margin: 8px 0;
+}
+
+a {
+  color: #7e22ce;
+  font-weight: 700;
 }
