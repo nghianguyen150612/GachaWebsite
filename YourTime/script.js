@@ -102,23 +102,7 @@ function formatTimeDifference(hourDiff) {
 
 
 // ==========================================
-// 2. CHỨC NĂNG CHUYỂN ĐỔI TAB (TABS SWITCHER)
-// ==========================================
-const menuItems = document.querySelectorAll('.menu-item');
-menuItems.forEach(item => {
-    item.addEventListener('click', () => {
-        document.querySelector('.menu-item.active').classList.remove('active');
-        item.classList.add('active');
-
-        document.querySelector('.tab-content.active').classList.remove('active');
-        const targetTabId = item.getAttribute('data-target');
-        document.getElementById(targetTabId).classList.add('active');
-    });
-});
-
-
-// ==========================================
-// 3. CHỨC NĂNG TIMER (HẸN GIỜ ĐẾM NGƯỢC)
+// 2. CHỨC NĂNG TIMER (HẸN GIỜ ĐẾM NGƯỢC)
 // ==========================================
 let timerInterval = null;
 let timerSeconds = 300; // Mặc định thử nghiệm là 5 phút (5 * 60 giây)
@@ -172,7 +156,7 @@ resetTimerBtn.addEventListener('click', () => {
 
 
 // ==========================================
-// 4. CHỨC NĂNG STOPWATCH (BẤM GIỜ TIẾN)
+// 3. CHỨC NĂNG STOPWATCH (BẤM GIỜ TIẾN)
 // ==========================================
 let stopwatchInterval = null;
 let stopwatchElapsedTime = 0; // Đơn vị: mili giây

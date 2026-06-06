@@ -1,32 +1,34 @@
 <!DOCTYPE html>
-<html lang="vi">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Windows Clock Clone</title>
+    <title>YourTime</title>
     <link rel="stylesheet" href="../CSS/YourTime.css">
 </head>
 <body>
-
+    <input class="tab-radio" type="radio" name="time-tabs" id="tab-clock" checked>
+    <input class="tab-radio" type="radio" name="time-tabs" id="tab-timer">
+    <input class="tab-radio" type="radio" name="time-tabs" id="tab-stopwatch">
     <div class="window-container">
         <aside class="sidebar">
-            <div class="menu-item active" data-target="world-clock-tab">
+            <label class="menu-item" for="tab-clock">
                 <span class="menu-icon" aria-hidden="true">CLK</span>
                 <span class="menu-label">Local Time</span>
-            </div>
-            <div class="menu-item" data-target="timer-tab">
+            </label>
+            <label class="menu-item" for="tab-timer">
                 <span class="menu-icon" aria-hidden="true">TMR</span>
                 <span class="menu-label">Timer</span>
-            </div>
-            <div class="menu-item" data-target="stopwatch-tab">
+            </label>
+            <label class="menu-item" for="tab-stopwatch">
                 <span class="menu-icon" aria-hidden="true">SW</span>
                 <span class="menu-label">Stopwatch</span>
-            </div>
+            </label>
         </aside>
 
         <main class="main-content">
             
-            <section id="world-clock-tab" class="tab-content active">
+            <section id="world-clock-tab" class="tab-content">
                 <header class="content-header">
                     <h2>Local time</h2>
                 </header>

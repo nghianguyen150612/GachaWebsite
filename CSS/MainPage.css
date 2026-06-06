@@ -114,12 +114,10 @@ button:disabled {
   position: absolute;
   inset: 0;
   transform-origin: 50% 50%;
-  transform: rotate(var(--slice-rotation));
   clip-path: polygon(50% 50%, 86.33% 0%, 13.67% 0%);
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  background-color: var(--slice-color);
   cursor: pointer;
   transition: filter 0.2s ease;
 }
@@ -133,11 +131,41 @@ button:disabled {
   top: 35px;
   max-width: 120px;
   font-weight: 700;
-  color: var(--slice-text-color);
+  color: #ffffff;
   font-size: 18px;
   line-height: 1.1;
   text-align: center;
   text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
+}
+
+.slice-1 {
+  transform: rotate(0deg);
+  background-color: #ff5722;
+}
+
+.slice-2 {
+  transform: rotate(72deg);
+  background-color: #4caf50;
+}
+
+.slice-3 {
+  transform: rotate(144deg);
+  background-color: #2196f3;
+}
+
+.slice-4 {
+  transform: rotate(216deg);
+  background-color: #9c27b0;
+}
+
+.slice-5 {
+  transform: rotate(288deg);
+  background-color: #ffeb3b;
+}
+
+.slice-5 span {
+  color: #333333;
+  text-shadow: none;
 }
 
 .center-circle {
@@ -197,22 +225,6 @@ button:disabled {
 
 .modal-overlay.active .modal-box {
   transform: scale(1);
-}
-
-.close-btn {
-  position: absolute;
-  top: 12px;
-  right: 15px;
-  min-height: auto;
-  padding: 0;
-  background: transparent;
-  color: #777777;
-  font-size: 24px;
-  font-weight: 700;
-}
-
-.close-btn:hover {
-  color: #333333;
 }
 
 .modal-box h2 {

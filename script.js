@@ -9,19 +9,10 @@ const storageKeys = {
   currentUser: "currentUsername"
 };
 
-const prizes = [
-  { name: "Buyer", color: "#ff5722", url: "Buyer/" },
-  { name: "iTube", color: "#4caf50", url: "iTube/" },
-  { name: "MusicListener", color: "#2196f3", url: "MusicListener/" },
-  { name: "Stream", color: "#9c27b0", url: "Stream/" },
-  { name: "YourTime", color: "#ffeb3b", textColor: "#333333", url: "YourTime/" }
-];
-
 const spinConfig = {
   rounds: 6,
   duration: 4000,
-  redirectDelay: 1300,
-  sliceDegree: 360 / prizes.length
+  redirectDelay: 1300
 };
 
 let currentRotation = 0;
@@ -115,47 +106,35 @@ function initMainPage() {
 function initWheel() {
   const wheel = $("#wheel");
   const spinButton = $("#spin-btn");
-  const closeModal = $("#close-modal");
   const modal = $("#modal-overlay");
 
-  if (wheel) renderWheel(wheel);
+  const prizes = getWheelPrizes(wheel);
 
-  if (spinButton && wheel && modal) {
-    spinButton.addEventListener("click", () => spinWheel(wheel, spinButton, modal));
+  if (spinButton && wheel && modal && prizes.length > 0) {
+    spinButton.addEventListener("click", () => spinWheel(wheel, spinButton, modal, prizes));
   }
 
-  if (closeModal && modal) {
-    closeModal.addEventListener("click", () => modal.classList.remove("active"));
-  }
 }
 
-function renderWheel(wheel) {
-  wheel.textContent = "";
+function getWheelPrizes(wheel) {
+  if (!wheel) return [];
 
-  prizes.forEach((prize, index) => {
-    const slice = document.createElement("div");
-    const label = document.createElement("span");
-
-    slice.className = "slice";
-    slice.style.setProperty("--slice-color", prize.color);
-    slice.style.setProperty("--slice-rotation", `${index * spinConfig.sliceDegree}deg`);
-    slice.style.setProperty("--slice-text-color", prize.textColor || "#ffffff");
-
-    label.textContent = prize.name;
-    slice.appendChild(label);
-    wheel.appendChild(slice);
-  });
+  return Array.from(wheel.querySelectorAll(".slice")).map((slice) => ({
+    name: slice.dataset.name,
+    url: slice.dataset.url
+  }));
 }
 
-function spinWheel(wheel, spinButton, modal) {
+function spinWheel(wheel, spinButton, modal, prizes) {
   if (isSpinning) return;
 
   isSpinning = true;
   spinButton.disabled = true;
 
   const prizeIndex = Math.floor(Math.random() * prizes.length);
+  const sliceDegree = 360 / prizes.length;
   const prize = prizes[prizeIndex];
-  const targetRotation = normalizeDegree(-prizeIndex * spinConfig.sliceDegree);
+  const targetRotation = normalizeDegree(-prizeIndex * sliceDegree);
   const extraRotation = spinConfig.rounds * 360 + normalizeDegree(targetRotation - normalizeDegree(currentRotation));
 
   currentRotation += extraRotation;
@@ -177,7 +156,6 @@ function showPrize(prize, modal) {
 
   if (resultMessage) {
     resultMessage.textContent = `You have spun "${prize.name}".`;
-    resultMessage.style.color = prize.textColor || prize.color;
   }
 
   modal.classList.add("active");

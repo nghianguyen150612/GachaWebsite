@@ -25,6 +25,12 @@ body {
     overflow: hidden;
 }
 
+.tab-radio {
+    position: fixed;
+    opacity: 0;
+    pointer-events: none;
+}
+
 /* ==========================================================================
    2. KHUNG CỬA SỔ ỨNG DỤNG (TỰ PHÓNG TO ĐỒNG ĐỀU)
    ========================================================================== */
@@ -66,7 +72,9 @@ body {
     background-color: #383838;
 }
 
-.menu-item.active {
+#tab-clock:checked ~ .window-container label[for="tab-clock"],
+#tab-timer:checked ~ .window-container label[for="tab-timer"],
+#tab-stopwatch:checked ~ .window-container label[for="tab-stopwatch"] {
     background-color: #3d3d3d;
     border-left-color: #0078d4;
     font-weight: 600;
@@ -103,7 +111,9 @@ body {
     flex: 1;
 }
 
-.tab-content.active {
+#tab-clock:checked ~ .window-container #world-clock-tab,
+#tab-timer:checked ~ .window-container #timer-tab,
+#tab-stopwatch:checked ~ .window-container #stopwatch-tab {
     display: flex;
 }
 

@@ -20,7 +20,13 @@
         <section class="wheel-wrapper" aria-label="Lucky wheel">
             <div class="arrow"></div>
 
-            <div class="wheel" id="wheel"></div>
+            <div class="wheel" id="wheel">
+                <div class="slice slice-1" data-name="Buyer" data-url="Buyer/"><span>Buyer</span></div>
+                <div class="slice slice-2" data-name="iTube" data-url="iTube/"><span>iTube</span></div>
+                <div class="slice slice-3" data-name="MusicListener" data-url="MusicListener/"><span>MusicListener</span></div>
+                <div class="slice slice-4" data-name="Stream" data-url="Stream/"><span>Stream</span></div>
+                <div class="slice slice-5" data-name="YourTime" data-url="YourTime/"><span>YourTime</span></div>
+            </div>
 
             <button class="center-circle" id="spin-btn" type="button">Spin</button>
         </section>
@@ -29,7 +35,6 @@
 
     <div class="modal-overlay" id="modal-overlay">
         <div class="modal-box">
-            <button class="close-btn" id="close-modal" type="button" aria-label="Close">&times;</button>
             <h2>CONGRATUATIONS</h2>
             <p class="prize-text" id="result-message">You have spun "Website".</p>
             <p class="sub-text">Redirecting to the selected website...</p>

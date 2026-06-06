@@ -16,48 +16,31 @@
             <a href="../MainPage/">Back</a>
         </header>
 
-        <section class="player-panel">
-            <div class="now-playing">
-                <span class="eyebrow">Now Playing</span>
-                <h2 id="trackTitle">Music 1</h2>
-            </div>
-
-            <audio id="audioPlayer" src="Music1.mp3"></audio>
-
-            <div class="controls" aria-label="Music controls">
-                <button id="prevBtn" type="button" aria-label="Previous track">Prev</button>
-                <button id="playBtn" class="primary" type="button">Play</button>
-                <button id="nextBtn" type="button" aria-label="Next track">Next</button>
-            </div>
-
-            <div class="progress-row">
-                <span id="currentTime">0:00</span>
-                <input id="progressBar" type="range" min="0" max="100" value="0" aria-label="Track progress">
-                <span id="durationTime">0:00</span>
-            </div>
-
-            <label class="volume-row" for="volumeBar">
-                <span>Volume</span>
-                <input id="volumeBar" type="range" min="0" max="100" value="100">
-            </label>
-        </section>
-
         <section class="track-list" aria-label="Track list">
-            <button class="track active" type="button" data-index="0">
-                <span>01</span>
-                Music 1
-            </button>
-            <button class="track" type="button" data-index="1">
-                <span>02</span>
-                Music 2
-            </button>
-            <button class="track" type="button" data-index="2">
-                <span>03</span>
-                Music 3
-            </button>
+            <article class="track-card">
+                <div>
+                    <span>01</span>
+                    <h2>Music 1</h2>
+                </div>
+                <audio controls src="Music1.mp3"></audio>
+            </article>
+
+            <article class="track-card">
+                <div>
+                    <span>02</span>
+                    <h2>Music 2</h2>
+                </div>
+                <audio controls src="Music2.mp3"></audio>
+            </article>
+
+            <article class="track-card">
+                <div>
+                    <span>03</span>
+                    <h2>Music 3</h2>
+                </div>
+                <audio controls src="Music3.mp3"></audio>
+            </article>
         </section>
     </main>
-
-    <script src="script.js"></script>
 </body>
 </html>
