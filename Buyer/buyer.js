@@ -16,6 +16,8 @@ buyButtons.forEach((button) => {
     cart.push(item);
     saveCart(cart);
     button.textContent = "Added";
+    renderCart();
+    renderCheckout();
   });
 });
 
@@ -23,6 +25,7 @@ if (clearCartButton) {
   clearCartButton.addEventListener("click", () => {
     saveCart([]);
     renderCart();
+    renderCheckout();
   });
 }
 
@@ -52,7 +55,7 @@ function renderCheckout() {
 
   const cart = getCart();
   renderItems(checkoutList, cart, "No items to checkout.");
-  checkoutTotal.textContent = `$${sumCart(cart)}`;
+  checkoutTotal.textContent = formatPrice(sumCart(cart));
 }
 
 function renderItems(container, cart, emptyText) {
@@ -73,7 +76,7 @@ function renderItems(container, cart, emptyText) {
 
     row.className = "cart-line";
     name.textContent = item.name;
-    price.textContent = `$${item.price}`;
+    price.textContent = formatPrice(item.price);
 
     row.append(name, price);
     container.appendChild(row);
@@ -82,4 +85,8 @@ function renderItems(container, cart, emptyText) {
 
 function sumCart(cart) {
   return cart.reduce((total, item) => total + item.price, 0);
+}
+
+function formatPrice(value) {
+  return `$${Number(value).toFixed(2).replace(/\.00$/, "")}`;
 }
