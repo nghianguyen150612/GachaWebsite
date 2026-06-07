@@ -3,54 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Buyer</title>
+    <title>Buyer - Products</title>
     <link rel="stylesheet" href="../CSS/Buyer.css">
 </head>
 <body>
-    <header class="site-header">
-        <a class="brand" href="../MainPage/">Buyer</a>
-        <nav aria-label="Shop navigation">
-            <a href="#products">Products</a>
-            <a href="#categories">Categories</a>
-            <a href="#cart">Cart</a>
-        </nav>
-    </header>
+    <div class="shop-window">
+        <aside class="sidebar">
+            <a class="brand" href="../MainPage/">Buyer</a>
+            <nav aria-label="Shop navigation">
+                <a class="active" href="index.html">Products</a>
+                <a href="cart.html">Cart</a>
+                <a href="checkout.html">Checkout</a>
+            </nav>
+        </aside>
 
-    <main>
-        <section class="hero">
-            <div>
-                <p class="eyebrow">Everyday Tech Store</p>
-                <h1>Simple gear for work, play, and daily use.</h1>
-                <p>Browse useful products, compare prices, and check a simple cart summary before buying.</p>
-            </div>
-            <form class="search-card" action="#">
-                <label for="SearchProducts">Search products</label>
-                <input id="SearchProducts" type="search" placeholder="Headphones, mouse, charger...">
-                <button type="submit">Search</button>
-            </form>
-        </section>
+        <main class="shop-content">
+            <section class="hero">
+                <p class="eyebrow">BUYER</p>
+                <h1>Online shop with super cheap prices</h1>
+                <p>Choose an item from the menu. Cart and checkout are separate pages.</p>
+            </section>
 
-        <section class="category-strip" id="categories" aria-label="Product categories">
-            <article>
-                <span>Audio</span>
-                <strong>12 items</strong>
-            </article>
-            <article>
-                <span>Gaming</span>
-                <strong>8 items</strong>
-            </article>
-            <article>
-                <span>Accessories</span>
-                <strong>15 items</strong>
-            </article>
-        </section>
-
-        <section class="shop-layout">
-            <section id="products" aria-labelledby="ProductsTitle">
+            <section class="panel" aria-labelledby="ProductsTitle">
                 <div class="section-header">
                     <div>
-                        <p class="eyebrow">Featured</p>
-                        <h2 id="ProductsTitle">Popular Products</h2>
+                        <p class="eyebrow">Products</p>
+                        <h2 id="ProductsTitle">Available Items</h2>
                     </div>
                     <a href="../MainPage/">Back to Main Page</a>
                 </div>
@@ -60,21 +38,21 @@
                         <div class="product-image">Audio</div>
                         <p class="product-category">Headphones</p>
                         <h3>Wireless Headphones</h3>
-                        <p>Comfortable Bluetooth headphones with long battery life.</p>
+                        <p>Comfortable wireless audio for music, calls, and games.</p>
                         <div class="product-footer">
                             <strong>$29</strong>
-                            <button type="button">Add</button>
+                            <button type="button" data-cart-button data-name="Wireless Headphones" data-price="29">Buy</button>
                         </div>
                     </article>
 
                     <article class="product-card">
                         <div class="product-image">Game</div>
                         <p class="product-category">Gaming</p>
-                        <h3>Gaming Mouse</h3>
-                        <p>Lightweight mouse with responsive buttons and smooth tracking.</p>
+                        <h3>Hoàng Các</h3>
+                        <p>Useful nigger</p>
                         <div class="product-footer">
                             <strong>$19</strong>
-                            <button type="button">Add</button>
+                            <button type="button" data-cart-button data-name="Gaming Mouse" data-price="19">Buy</button>
                         </div>
                     </article>
 
@@ -82,48 +60,17 @@
                         <div class="product-image">Power</div>
                         <p class="product-category">Charger</p>
                         <h3>USB-C Charger</h3>
-                        <p>Compact fast charger for phones, tablets, and small devices.</p>
+                        <p>Compact charger for phones, tablets, and small devices.</p>
                         <div class="product-footer">
                             <strong>$15</strong>
-                            <button type="button">Add</button>
-                        </div>
-                    </article>
-
-                    <article class="product-card">
-                        <div class="product-image">Desk</div>
-                        <p class="product-category">Accessory</p>
-                        <h3>Laptop Stand</h3>
-                        <p>Stable aluminum stand for a cleaner and more ergonomic desk.</p>
-                        <div class="product-footer">
-                            <strong>$24</strong>
-                            <button type="button">Add</button>
+                            <button type="button" data-cart-button data-name="USB-C Charger" data-price="15">Buy</button>
                         </div>
                     </article>
                 </div>
             </section>
+        </main>
+    </div>
 
-            <aside class="cart-card" id="cart" aria-labelledby="CartTitle">
-                <h2 id="CartTitle">Cart Summary</h2>
-                <div class="cart-line">
-                    <span>Wireless Headphones</span>
-                    <strong>$29</strong>
-                </div>
-                <div class="cart-line">
-                    <span>USB-C Charger</span>
-                    <strong>$15</strong>
-                </div>
-                <div class="cart-total">
-                    <span>Total</span>
-                    <strong>$44</strong>
-                </div>
-                <button type="button">Checkout</button>
-                <p>Static demo cart. No JavaScript checkout is connected.</p>
-            </aside>
-        </section>
-    </main>
-
-    <footer>
-        <p>Buyer demo store. Built as a simple static shopping page.</p>
-    </footer>
+    <script src="buyer.js"></script>
 </body>
 </html>
