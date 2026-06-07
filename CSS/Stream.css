@@ -1,49 +1,144 @@
-* {
-  box-sizing: border-box;
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
 }
 
-body {
-  min-height: 100vh;
-  margin: 0;
-  display: grid;
-  place-items: center;
-  font-family: Arial, sans-serif;
-  background: #fbf3ff;
-  color: #1f2933;
+body{
+    background:#121212;
+    color:white;
 }
 
-main {
-  width: min(720px, calc(100vw - 32px));
-  padding: 24px;
-  background: #ffffff;
-  border: 1px solid #dfc1ef;
-  border-radius: 8px;
+header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 50px;
+    background:#1e1e1e;
 }
 
-h1 {
-  margin: 0 0 8px;
+.logo{
+    font-size:30px;
+    font-weight:bold;
+    color:#00d4ff;
 }
 
-h2 {
-  margin: 22px 0 10px;
-  font-size: 18px;
+nav a{
+    color:white;
+    text-decoration:none;
+    margin-left:20px;
+    transition:0.3s;
 }
 
-p {
-  margin: 0;
-  color: #52616f;
+nav a:hover{
+    color:#00d4ff;
 }
 
-ul {
-  margin: 0 0 20px;
-  padding-left: 20px;
+.banner{
+    text-align:center;
+    padding:100px 20px;
+    background:linear-gradient(135deg,#00d4ff,#7b2cff);
 }
 
-li {
-  margin: 8px 0;
+.banner h1{
+    font-size:50px;
 }
 
-a {
-  color: #7e22ce;
-  font-weight: 700;
+.banner p{
+    margin:15px 0;
+    font-size:20px;
+}
+
+.banner button{
+    padding:12px 25px;
+    border:none;
+    border-radius:8px;
+    background:white;
+    cursor:pointer;
+    font-weight:bold;
+}
+
+main{
+    padding:40px;
+}
+
+main h2{
+    margin-bottom:20px;
+}
+
+.game-list{
+    display:flex;
+    gap:25px;
+    flex-wrap:wrap;
+}
+
+.game-card{
+    width:300px;
+    background:#1e1e1e;
+    border-radius:12px;
+    overflow:hidden;
+    transition:0.3s;
+}
+
+.game-card:hover{
+    transform:translateY(-8px);
+}
+
+.game-card img{
+    width:100%;
+    height:180px;
+    object-fit:cover;
+}
+
+.game-card h3{
+    padding:15px 15px 5px;
+}
+
+.game-card p{
+    padding:0 15px;
+    color:#bdbdbd;
+}
+
+.game-card span{
+    display:block;
+    padding:15px;
+    color:#00ff88;
+    font-size:20px;
+    font-weight:bold;
+}
+
+.game-card button{
+    width:90%;
+    margin:0 5% 15px;
+    padding:10px;
+    border:none;
+    border-radius:8px;
+    background:#00d4ff;
+    cursor:pointer;
+    font-weight:bold;
+}
+
+#gioHang{
+    width: 80%;
+    margin: 30px auto;
+    background: #1e1e1e;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+#gioHang ul{
+    margin-top: 10px;
+}
+
+#gioHang li{
+    padding: 10px;
+    border-bottom: 1px solid #444;
+}
+
+footer{
+    text-align:center;
+    padding:20px;
+    background:#1e1e1e;
+    margin-top:30px;
 }

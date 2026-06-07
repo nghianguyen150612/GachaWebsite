@@ -3,24 +3,123 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Stream</title>
-    <link rel="stylesheet" href="../CSS/Stream.css">
+    <title>Stream Games</title>
+    <link rel="stylesheet" href="../CSS/Buyer.css">
 </head>
 <body>
-    <main>
-        <h1>Stream</h1>
-        <p>A simple page for browsing stream categories.</p>
+    <input class="tab-radio" type="radio" name="shop-tabs" id="tab-products" checked>
+    <input class="tab-radio" type="radio" name="shop-tabs" id="tab-cart">
+    <input class="tab-radio" type="radio" name="shop-tabs" id="tab-checkout">
 
-        <section>
-            <h2>Live Categories</h2>
-            <ul>
-                <li>Gaming</li>
-                <li>Music</li>
-                <li>Study With Me</li>
-            </ul>
-        </section>
+    <div class="shop-window">
+        <aside class="sidebar">
+            <a class="brand" href="../MainPage/">Stream</a>
+            <nav aria-label="Shop navigation">
+                <label class="menu-item" for="tab-products">
+                    <span class="menu-icon" aria-hidden="true">PRD</span>
+                    <span class="menu-label">Products</span>
+                </label>
+                <label class="menu-item" for="tab-cart">
+                    <span class="menu-icon" aria-hidden="true">CRT</span>
+                    <span class="menu-label">Cart</span>
+                </label>
+                <label class="menu-item" for="tab-checkout">
+                    <span class="menu-icon" aria-hidden="true">CHK</span>
+                    <span class="menu-label">Checkout</span>
+                </label>
+            </nav>
+        </aside>
 
-        <a href="../MainPage/">Back to Main Page</a>
-    </main>
+        <main class="shop-content">
+            <section class="hero">
+                <p class="eyebrow">STREAM</p>
+                <h1>Online game shop</h1>
+            </section>
+
+            <section id="products-tab" class="tab-content products-panel" aria-labelledby="ProductsTitle">
+                <div class="section-header">
+                    <div>
+                        <p class="eyebrow">Products</p>
+                        <h2 id="ProductsTitle">Popular games</h2>
+                    </div>
+                </div>
+
+                <div class="product-grid">
+                    <article class="product-card">
+                        <div class="product-image"><img src="images/AE.jpg" alt="Arknights: Endfield"></div>
+                        <p class="product-category">Strategy</p>
+                        <h3>Arknights : Endfield</h3>
+                        <p>Open world gacha game</p>
+                        <div class="product-footer"><strong>Free</strong><button type="button" data-cart-button data-name="Arknights : Endfield" data-price="0">Buy</button></div>
+                    </article>
+
+                    <article class="product-card">
+                        <div class="product-image"><img src="images/LOL.jpg" alt="League of Legends"></div>
+                        <p class="product-category">MOBA</p>
+                        <h3>League of Legends</h3>
+                        <p>5v5 competitive MOBA game</p>
+                        <div class="product-footer"><strong>$30</strong><button type="button" data-cart-button data-name="League of Legends" data-price="30">Buy</button></div>
+                    </article>
+
+                    <article class="product-card">
+                        <div class="product-image"><img src="images/Roblox.jpg" alt="Roblox"></div>
+                        <p class="product-category">Platform</p>
+                        <h3>Roblox</h3>
+                        <p>Creativity game platform</p>
+                        <div class="product-footer"><strong>$50</strong><button type="button" data-cart-button data-name="Roblox" data-price="50">Buy</button></div>
+                    </article>
+
+                    <article class="product-card">
+                        <div class="product-image"><img src="images/FreeFire.jpg" alt="Free Fire"></div>
+                        <p class="product-category">Platform</p>
+                        <h3>Free Fire </h3>
+                        <p>Battleground game</p>
+                        <div class="product-footer"><strong>$100</strong><button type="button" data-cart-button data-name="Free Fire" data-price="100">Buy</button></div>
+                    </article>
+
+                    <article class="product-card">
+                        <div class="product-image"><img src="images/roblox.jpg" alt="CS 2"></div>
+                        <p class="product-category">Platform</p>
+                        <h3>CS 2</h3>
+                        <p>First-person shooter game</p>
+                        <div class="product-footer"><strong>$10</strong><button type="button" data-cart-button data-name="CS 2" data-price="10">Buy</button></div>
+                    </article>
+
+                    <article class="product-card">
+                        <div class="product-image"><img src="images/roblox.jpg" alt="Genshin Impact"></div>
+                        <p class="product-category">Platform</p>
+                        <h3>Genshin Impact</h3>
+                        <p>Action RPG game</p>
+                        <div class="product-footer"><strong>$500</strong><button type="button" data-cart-button data-name="Genshin Impact" data-price="500">Buy</button></div>
+                    </article>
+                </div>
+            </section>
+
+            <section id="cart-tab" class="tab-content panel" aria-labelledby="CartTitle">
+                <div class="section-header">
+                    <div>
+                        <p class="eyebrow">Cart</p>
+                        <h2 id="CartTitle">Your Cart</h2>
+                    </div>
+                    <button type="button" data-clear-cart>Clear Cart</button>
+                </div>
+                <div id="cart-list" class="cart-list"></div>
+            </section>
+
+            <section id="checkout-tab" class="tab-content panel checkout-panel" aria-labelledby="CheckoutTitle">
+                <p class="eyebrow">Checkout</p>
+                <h2 id="CheckoutTitle">Checkout Summary</h2>
+                <div id="checkout-list" class="cart-list"></div>
+                <div class="cart-line total">
+                    <span>Total</span>
+                    <strong id="checkout-total">$0</strong>
+                </div>
+                <button type="button">Place Order</button>
+                <p class="note">Demo only. This button has no action.</p>
+            </section>
+        </main>
+    </div>
+
+    <script src="stream.js"></script>
 </body>
 </html>
