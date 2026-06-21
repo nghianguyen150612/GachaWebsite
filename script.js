@@ -42,7 +42,7 @@ function handleSignUp(event) {
   const confirmPassword = selectElement("#ConfirmPassword").value;
 
   if (!email.checkValidity()) {
-    showError("Email bạn nhập không đúng định dạng rồi.");
+    showError("Email không đúng định dạng rồi.");
     return;
   }
 
@@ -88,7 +88,7 @@ function handleLogin(event) {
   const user = getUsersList().find((item) => item.username === username);
 
   if (!user || user.password !== password) {
-    showError("Sai tên đăng nhập hoặc mật khẩu rồi bạn ơi.");
+    showError("Sai tên đăng nhập hoặc mật khẩu");
     return;
   }
 
