@@ -1,0 +1,293 @@
+html {
+    font-size: clamp(12px, 0.8vw + 8px, 20px); 
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #1c1c1c;
+    color: #ffffff;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1.5rem;
+    overflow: hidden;
+}
+
+.tab-radio {
+    position: fixed;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.window-container {
+    width: 100%;
+    max-width: 58rem;
+    height: 38rem;
+    max-height: 90vh;
+    background-color: #202020;
+    border: 1px solid #3c3c3c;
+    border-radius: 0.5rem;
+    display: flex;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    overflow: hidden;
+}
+
+.sidebar {
+    width: 14rem;
+    background-color: #2c2c2c;
+    padding: 1.2rem 0 0;
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+}
+
+.brand {
+    margin: 0 1.2rem 1.2rem;
+    color: #ffffff;
+    font-size: 1.2rem;
+    font-weight: 800;
+    text-decoration: none;
+}
+
+.menu-item {
+    display: flex;
+    align-items: center;
+    padding: 0.9rem 1.2rem;
+    cursor: pointer;
+    gap: 1rem;
+    font-size: 0.9rem;
+    transition: background 0.2s;
+    border-left: 4px solid transparent;
+    color: #c8c8c8;
+    text-decoration: none;
+}
+
+.menu-item:hover {
+    background-color: #383838;
+}
+
+#tab-clock:checked ~ .window-container label[for="tab-clock"],
+#tab-timer:checked ~ .window-container label[for="tab-timer"],
+#tab-stopwatch:checked ~ .window-container label[for="tab-stopwatch"] {
+    background-color: #3d3d3d;
+    border-left-color: #0078d4;
+    font-weight: 600;
+}
+
+.menu-icon {
+    width: 1.8rem;
+    text-align: center;
+    color: #c8c8c8;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0;
+}
+
+/* Khu vực nội dung chính */
+.main-content {
+    flex: 1;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+}
+
+.content-header h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+}
+
+/* --- CÁC TAB NỘI DUNG --- */
+.tab-content {
+    display: none;
+    flex-direction: column;
+    flex: 1;
+}
+
+#tab-clock:checked ~ .window-container #world-clock-tab,
+#tab-timer:checked ~ .window-container #timer-tab,
+#tab-stopwatch:checked ~ .window-container #stopwatch-tab {
+    display: flex;
+}
+
+.clock-display, .tab-placeholder {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    width: 100%;
+}
+
+/* Phần hiển thị số thời gian lớn */
+.digital-clock, .timer-circle, .stopwatch-display {
+    font-size: 4.5rem; /* Khi font-size ở html tăng, 4.5rem này tự động nhân lên thành cỡ chữ khổng lồ */
+    font-weight: 300;
+    letter-spacing: 2px;
+    margin-bottom: 0.3rem;
+    text-align: center;
+    white-space: nowrap;
+}
+
+.date-display {
+    font-size: 0.9rem;
+    color: #a0a0a0;
+    margin-bottom: 2.5rem;
+    text-align: center;
+}
+
+.timezone-list {
+    width: 100%;
+    max-width: 38rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+}
+
+.timezone-item {
+    background-color: #2c2c2c;
+    padding: 1rem 1.2rem;
+    border-radius: 0.4rem;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    gap: 0.9rem;
+    align-items: center;
+    border: 1px solid #383838;
+}
+
+.timezone-icon {
+    width: 2.4rem;
+    height: 2.4rem;
+    border: 1px solid #4a4a4a;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #242424;
+    color: #d8d8d8;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0;
+}
+
+.tz-info {
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+}
+
+.tz-name {
+    font-size: 0.95rem;
+    font-weight: 500;
+}
+
+.tz-diff {
+    font-size: 0.75rem;
+    color: #a0a0a0;
+}
+
+.tz-time {
+    font-size: 1.5rem;
+    font-weight: 300;
+    white-space: nowrap;
+}
+
+.control-buttons {
+    display: flex;
+    gap: 0.6rem;
+    margin-top: 1rem;
+}
+
+.win-btn {
+    background-color: #2c2c2c;
+    color: white;
+    border: 1px solid #3c3c3c;
+    padding: 0.5rem 1.5rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: background 0.1s, transform 0.1s, filter 0.1s;
+}
+
+.win-btn:hover {
+    background-color: #383838;
+    transform: scale(1.05);
+    filter: brightness(1.2);
+}
+
+.win-btn.primary {
+    background-color: #0078d4;
+    border-color: #0086e6;
+}
+
+.app-footer {
+    margin-top: auto;
+    padding-top: 1rem;
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    border-top: 1px solid #3c3c3c;
+    color: #a0a0a0;
+    font-size: 0.8rem;
+}
+
+.toast-message {
+    position: fixed;
+    right: 1.5rem;
+    bottom: 1.5rem;
+    z-index: 9999;
+    padding: 0.8rem 1.2rem;
+    background-color: #ff3333;
+    color: #ffffff;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    font-weight: 700;
+    transition: opacity 0.3s ease;
+}
+
+.toast-message.hide {
+    opacity: 0;
+}
+
+@media (min-width: 1200px) {
+    html {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 600px) {
+    html {
+        font-size: 14px;
+    }
+    .menu-label {
+        display: none;
+    }
+    .sidebar {
+        width: 4.5rem;
+    }
+    .menu-item {
+        justify-content: center;
+        padding: 1rem 0;
+    }
+
+    .timezone-item {
+        grid-template-columns: auto 1fr;
+    }
+
+    .tz-time {
+        grid-column: 2;
+        justify-self: start;
+    }
+}

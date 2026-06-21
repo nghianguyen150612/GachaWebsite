@@ -1,0 +1,146 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  padding: 24px;
+  display: grid;
+  place-items: center;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: #1c1c1c;
+  color: #ffffff;
+}
+
+.music-app {
+  width: min(1080px, 100%);
+  min-height: min(720px, calc(100vh - 48px));
+  display: grid;
+  gap: 32px;
+  background: #202020;
+  border: 1px solid #3c3c3c;
+  border-radius: 8px;
+  padding: 32px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  overflow-y: auto;
+  scrollbar-color: #555555 #202020;
+  scrollbar-width: thin;
+}
+
+.app-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #3c3c3c;
+}
+
+h1,
+h2,
+p {
+  margin: 0;
+}
+
+.app-header h1 {
+  font-size: 32px;
+  font-weight: 800;
+}
+
+.app-header p {
+  margin-top: 6px;
+  color: #c8c8c8;
+  font-size: 14px;
+}
+
+.top-nav {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.app-header a {
+  min-height: 40px;
+  padding: 10px 14px;
+  border-radius: 6px;
+  background: #0078d4;
+  color: #ffffff;
+  font-weight: 700;
+  text-decoration: none;
+  transition: background 0.2s;
+}
+
+.app-header a:hover {
+  background: #1084dd;
+}
+
+.track-list {
+  display: grid;
+  gap: 14px;
+}
+
+.track-card {
+  background: #2c2c2c;
+  border: 1px solid #3c3c3c;
+  border-radius: 8px;
+  padding: 20px;
+  display: grid;
+  gap: 14px;
+  transition: background 0.2s;
+}
+
+.track-card:hover {
+  background: #333333;
+}
+
+.track-card span {
+  display: block;
+  color: #0078d4;
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.track-card h2 {
+  font-size: 22px;
+  font-weight: 600;
+}
+
+audio {
+  width: 100%;
+  height: 32px;
+  accent-color: #0078d4;
+}
+
+.app-footer {
+  padding-top: 16px;
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  border-top: 1px solid #3c3c3c;
+  color: #a0a0a0;
+  font-size: 13px;
+}
+
+@media (max-width: 768px) {
+  body {
+    padding: 16px;
+  }
+
+  .music-app {
+    padding: 20px;
+    gap: 20px;
+  }
+
+  .app-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .app-header a {
+    width: 100%;
+    text-align: center;
+  }
+}

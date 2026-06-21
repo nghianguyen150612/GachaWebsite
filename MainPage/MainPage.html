@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang chủ - GachaWebsite</title>
+    <link rel="stylesheet" href="../CSS/MainPage.css">
+</head>
+<body>
+    <header class="site-header">
+        <div>
+            <h1>GachaWebsite</h1>
+        </div>
+        <nav class="header-actions" aria-label="Điều hướng chính">
+            <a class="report-link" href="../ReportPage/ReportPage.html">Báo lỗi</a>
+        </nav>
+    </header>
+
+    <main class="main-page">
+        <section class="wheel-wrapper" aria-label="Vòng quay may mắn">
+            <div class="arrow"></div>
+
+            <div class="wheel" id="wheel">
+                <div class="slice slice-1" data-name="Buyer" data-url="Buyer/Buyer.html"><span>Buyer</span></div>
+                <div class="slice slice-2" data-name="iTube" data-url="iTube/iTube.html"><span>iTube</span></div>
+                <div class="slice slice-3" data-name="MusicListener" data-url="MusicListener/MusicListener.html"><span>MusicListener</span></div>
+                <div class="slice slice-4" data-name="Stream" data-url="Stream/Stream.html"><span>Stream</span></div>
+                <div class="slice slice-5" data-name="YourTime" data-url="YourTime/YourTime.html"><span>YourTime</span></div>
+            </div>
+
+            <button class="center-circle" id="spin-btn" type="button">QUAY</button>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <span>GachaWebsite</span>
+        <span>Được phát triển bởi Công Nghĩa & Khôi Nguyên</span>
+    </footer>
+
+    <div class="modal-overlay" id="modal-overlay">
+        <div class="modal-box">
+            <h2>CHÚC MỪNG</h2>
+            <p class="prize-text" id="result-message">Trang web</p>
+            <p class="sub-text">Đang di chuyển đến trang web...</p>
+        </div>
+    </div>
+
+    <script src="../script.js"></script>
+</body>
+</html>

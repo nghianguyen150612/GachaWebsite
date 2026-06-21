@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iTube - GachaWebsite</title>
+    <link rel="stylesheet" href="../CSS/iTube.css">
+</head>
+<body>
+    <input class="tab-radio" type="radio" name="shop-tabs" id="tab-products" checked>
+
+    <div class="shop-window">
+        <aside class="sidebar">
+            <a class="brand" href="../MainPage/MainPage.html">iTUBE</a>
+            <nav aria-label="Điều hướng video">
+                <a class="menu-item" href="../MainPage/MainPage.html">
+                    <span class="menu-icon" aria-hidden="true">🏠</span>
+                    <span class="menu-label">Trang chủ</span>
+                </a>
+                <label class="menu-item" for="tab-products">
+                    <span class="menu-icon" aria-hidden="true">🎥</span>
+                    <span class="menu-label">Video</span>
+                </label>
+            </nav>
+        </aside>
+
+        <main class="shop-content">
+            <section class="hero">
+                <p class="eyebrow">iTUBE</p>
+                <h1>Web xem video cực nhẹ</h1>
+                <p class="hero-description"></p>
+            </section>
+
+            <section id="products-tab" class="tab-content products-panel">
+                <div class="section-header">
+                    <div>
+                        <p class="eyebrow">Video</p>
+                        <h2 id="ProductsTitle">Tutorial</h2>
+                    </div>
+                </div>
+
+                <div class="video-grid">
+                    <div class="video-card" data-video-id="0" data-title="Học HTML trong 1 giờ" data-description="Học các kiến thức cơ bản về HTML chỉ trong một giờ.">
+                        <div class="video-thumbnail"><img src="images/video1.png" alt="Học HTML trong 1 giờ" onerror="this.style.display='none'"></div>
+                        <div class="video-info">
+                            <h3>Học HTML trong 1 giờ</h3>
+                            <p>1 giờ</p>
+                        </div>
+                    </div>
+
+                    <div class="video-card" data-video-id="1" data-title="Hướng dẫn Minecraft" data-description="Học cách chơi và sáng tạo trong Minecraft.">
+                        <div class="video-thumbnail"><img src="images/video2.png" alt="Hướng dẫn Minecraft" onerror="this.style.display='none'"></div>
+                        <div class="video-info">
+                            <h3>Hướng dẫn chơi Minecraft</h3>
+                            <p>3 giờ</p>
+                        </div>
+                    </div>
+
+                    <div class="video-card" data-video-id="2" data-title="Cách tải Visual Studio Code" data-description="Hướng dẫn từng bước tải và cài đặt Visual Studio Code.">
+                        <div class="video-thumbnail"><img src="images/video3.png" alt="Cách tải Visual Studio Code" onerror="this.style.display='none'"></div>
+                        <div class="video-info">
+                            <h3>Cách tải Visual Studio Code</h3>
+                            <p>3 phút</p>
+                        </div>
+                    </div>
+
+                    <div class="video-card" data-video-id="3" data-title="Cách tải Windows 11" data-description="Hướng dẫn từng bước tải và cài đặt Windows 11.">
+                        <div class="video-thumbnail"><img src="images/video4.png" alt="Cách tải Windows 11" onerror="this.style.display='none'"></div>
+                        <div class="video-info">
+                            <h3>Cách tải Windows 11</h3>
+                            <p>12 phút</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <footer class="app-footer">
+                <span>iTube</span>
+                <span>Được phát triển bởi Công Nghĩa & Khôi Nguyên</span>
+            </footer>
+        </main>
+    </div>
+
+    <div class="modal-overlay" id="videoModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="modalTitle">Tiêu đề video</h2>
+                <button class="modal-close" id="closeModal" type="button" aria-label="Đóng">&times;</button>
+            </div>
+            <div class="modal-player">
+                <video id="videoPlayer" controls>
+                    <source src="" type="video/mp4">
+                    Trình duyệt của bạn không hỗ trợ thẻ video.
+                </video>
+            </div>
+            <p class="modal-description" id="modalDescription">Mô tả video sẽ hiển thị tại đây.</p>
+        </div>
+    </div>
+
+    <script src="iTube.js"></script>
+</body>
+</html>

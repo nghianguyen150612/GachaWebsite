@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kho game - GachaWebsite</title>
+    <link rel="stylesheet" href="../CSS/Stream.css">
+</head>
+<body>
+    <input class="tab-radio" type="radio" name="shop-tabs" id="tab-products" checked>
+    <input class="tab-radio" type="radio" name="shop-tabs" id="tab-cart">
+    <input class="tab-radio" type="radio" name="shop-tabs" id="tab-checkout">
+
+    <div class="shop-window">
+        <aside class="sidebar">
+            <a class="brand" href="../MainPage/MainPage.html">STREAM</a>
+            <nav aria-label="Điều hướng cửa hàng">
+                <a class="menu-item" href="../MainPage/MainPage.html">
+                    <span class="menu-icon" aria-hidden="true">🏠</span>
+                    <span class="menu-label">Trang chủ</span>
+                </a>
+                <label class="menu-item" for="tab-products">
+                    <span class="menu-icon" aria-hidden="true">PRD</span>
+                    <span class="menu-label">Game</span>
+                </label>
+                <label class="menu-item" for="tab-cart">
+                    <span class="menu-icon" aria-hidden="true">CRT</span>
+                    <span class="menu-label">Giỏ hàng</span>
+                </label>
+                <label class="menu-item" for="tab-checkout">
+                    <span class="menu-icon" aria-hidden="true">CHK</span>
+                    <span class="menu-label">Thanh toán</span>
+                </label>
+            </nav>
+        </aside>
+
+        <main class="shop-content">
+            <section class="hero">
+                <p class="eyebrow">STREAM</p>
+                <h1>Mua game online với mức giá hấp dẫn</h1>
+            </section>
+
+            <section id="products-tab" class="tab-content products-panel" aria-labelledby="ProductsTitle">
+                <div class="section-header">
+                    <div>
+                        <p class="eyebrow">Game</p>
+                        <h2 id="ProductsTitle">Game phổ biến</h2>
+                    </div>
+                </div>
+
+                <div class="product-grid">
+                    <article class="product-card">
+                        <div class="product-image"><img src="images/AE.jpg" alt="Arknights: Endfield"></div>
+                        <p class="product-category">Chiến lược</p>
+                        <h3>Arknights: Endfield</h3>
+                        <p>Game gacha thế giới mở</p>
+                        <details>
+                            <summary>Chi tiết game</summary>
+                            <p>Khám phá, xây dựng căn cứ, chiến đấu và chiến lược đội nhóm.</p>
+                        </details>
+                        <div class="product-footer"><strong>Miễn phí</strong><button type="button" data-cart-button data-name="Arknights: Endfield" data-price="0">Nhận</button></div>
+                    </article>
+
+                    <article class="product-card">
+                        <div class="product-image"><img src="images/LOL.jpg" alt="League of Legends"></div>
+                        <p class="product-category">MOBA</p>
+                        <h3>League of Legends</h3>
+                        <p>Game MOBA 5v5 cạnh tranh</p>
+                        <details>
+                            <summary>Chi tiết game</summary>
+                            <p>Chiến lược đội nhóm, rank, tướng và lối chơi esports.</p>
+                        </details>
+                        <div class="product-footer"><strong>$30</strong><button type="button" data-cart-button data-name="League of Legends" data-price="30">Mua</button></div>
+                    </article>
+
+                    <article class="product-card">
+                        <div class="product-image"><img src="images/Roblox.jpg" alt="Roblox"></div>
+                        <p class="product-category">Nền tảng</p>
+                        <h3>Roblox</h3>
+                        <p>Nền tảng game sáng tạo</p>
+                        <details>
+                            <summary>Chi tiết game</summary>
+                            <p>Chơi game do người dùng tạo, xây dựng và khám phá thế giới xã hội.</p>
+                        </details>
+                        <div class="product-footer"><strong>$50</strong><button type="button" data-cart-button data-name="Roblox" data-price="50">Mua</button></div>
+                    </article>
+
+                    <article class="product-card">
+                        <div class="product-image"><img src="images/FF.jpg" alt="Free Fire"></div>
+                        <p class="product-category">Battle Royale</p>
+                        <h3>Free Fire</h3>
+                        <p>Game bắn súng sinh tồn</p>
+                        <details>
+                            <summary>Chi tiết game</summary>
+                            <p>Trậy tàn nhanh, điều khiển thân thiện với điện thoại.</p>
+                        </details>
+                        <div class="product-footer"><strong>$100</strong><button type="button" data-cart-button data-name="Free Fire" data-price="100">Mua</button></div>
+                    </article>
+
+                    <article class="product-card">
+                        <div class="product-image"><img src="images/CS2.jpg" alt="CS 2"></div>
+                        <p class="product-category">Bắn súng</p>
+                        <h3>CS 2</h3>
+                        <p>Game bắn súng góc nhìn thứ nhất</p>
+                        <details>
+                            <summary>Chi tiết game</summary>
+                            <p>Bắn súng chiến thuật, cạnh tranh theo đội với hệ thống kinh tế.</p>
+                        </details>
+                        <div class="product-footer"><strong>$10</strong><button type="button" data-cart-button data-name="CS 2" data-price="10">Mua</button></div>
+                    </article>
+
+                    <article class="product-card">
+                        <div class="product-image"><img src="images/GI.jpeg" alt="Genshin Impact"></div>
+                        <p class="product-category">RPG</p>
+                        <h3>Genshin Impact</h3>
+                        <p>Game RPG hành động thế giới mở</p>
+                        <details>
+                            <summary>Chi tiết game</summary>
+                            <p>Khám phá thế giới, nhân vật, nhiệm vụ và chiến đấu nguyên tố.</p>
+                        </details>
+                        <div class="product-footer"><strong>$500</strong><button type="button" data-cart-button data-name="Genshin Impact" data-price="500">Mua</button></div>
+                    </article>
+                </div>
+            </section>
+
+            <section id="cart-tab" class="tab-content panel" aria-labelledby="CartTitle">
+                <div class="section-header">
+                    <div>
+                        <p class="eyebrow">Giỏ hàng</p>
+                        <h2 id="CartTitle">Giỏ hàng của bạn</h2>
+                    </div>
+                    <button type="button" data-clear-cart>Xóa giỏ hàng</button>
+                </div>
+                <div id="cart-list" class="cart-list"></div>
+            </section>
+
+            <section id="checkout-tab" class="tab-content panel checkout-panel" aria-labelledby="CheckoutTitle">
+                <p class="eyebrow">Thanh toán</p>
+                <h2 id="CheckoutTitle">Tóm tắt đơn hàng</h2>
+                <div id="checkout-list" class="cart-list"></div>
+                <div class="cart-line total">
+                    <span>Tổng cộng</span>
+                    <strong id="checkout-total">$0</strong>
+                </div>
+                <button type="button" data-place-order>Đặt hàng</button>
+                <div class="success-message" id="orderSuccessMessage" role="status" aria-live="polite"></div>
+                <p class="note"> thực tế.</p>
+            </section>
+
+            <footer class="app-footer">
+                <span>STREAM</span>
+                <span>Được phát triển bởi Công Nghĩa & Khôi Nguyên.</span>
+            </footer>
+        </main>
+    </div>
+
+    <script src="../Cart.js"></script>
+    <script src="Stream.js"></script>
+</body>
+</html>

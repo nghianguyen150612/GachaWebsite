@@ -1,0 +1,33 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  display: grid;
+  place-items: center;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: #1c1c1c;
+  color: #ffffff;
+}
+
+a {
+  min-height: 40px;
+  padding: 10px 14px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  background: #0078d4;
+  color: #ffffff;
+  font-weight: 700;
+  text-decoration: none;
+  transition: background 0.2s, transform 0.2s, filter 0.2s;
+}
+
+a:hover {
+  background: #1084dd;
+  transform: scale(1.05);
+  filter: brightness(1.2);
+}

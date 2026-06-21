@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng nhập - GachaWebsite</title>
+    <link rel="stylesheet" href="../CSS/Login.css">
+</head>
+<body>
+
+    <form id="LoginForm">
+        <h2>Đăng nhập</h2>
+
+        <div>
+            <label for="LoginUsername">Tên đăng nhập</label>
+            <input type="text" id="LoginUsername" name="Username" placeholder=" " required>
+        </div>
+
+        <div>
+            <label for="LoginPassword">Mật khẩu</label>
+            <input type="password" id="LoginPassword" name="Password" placeholder=" " required>
+        </div>
+
+        <button type="submit">Đăng nhập ngay</button>
+        <a class="form-link" href="../SignUp/SignUp.html">Bạn chưa có tài khoản? Đăng ký tại đây</a>
+    </form>
+
+    <p id="FormError" aria-live="polite"></p>
+
+    <script src="../script.js"></script>
+
+</body>
+</html>

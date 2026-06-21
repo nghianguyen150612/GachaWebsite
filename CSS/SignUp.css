@@ -1,0 +1,86 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  display: grid;
+  place-items: center;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: #1c1c1c;
+  color: #ffffff;
+}
+
+form {
+  width: min(420px, calc(100vw - 32px));
+  padding: 24px;
+  background: #202020;
+  border: 1px solid #3c3c3c;
+  border-radius: 8px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.45);
+}
+
+h2 {
+  margin: 0 0 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 700;
+}
+
+input {
+  width: 100%;
+  margin-bottom: 14px;
+  padding: 10px;
+  border: 1px solid #3c3c3c;
+  border-radius: 6px;
+  background: #2c2c2c;
+  color: #ffffff;
+  font: inherit;
+}
+
+button {
+  min-height: 40px;
+  padding: 10px 14px;
+  border: 1px solid #0086e6;
+  border-radius: 6px;
+  background: #0078d4;
+  color: #ffffff;
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s, filter 0.2s;
+}
+
+button:hover {
+  background: #1084dd;
+  transform: scale(1.05);
+  filter: brightness(1.2);
+}
+
+button:hover {
+  background: #1084dd;
+}
+
+.form-link {
+  display: inline-block;
+  margin-left: 10px;
+  color: #8ab4f8;
+  font-weight: 700;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.form-link:hover {
+  color: #ffffff;
+}
+
+#FormError {
+  min-height: 22px;
+  margin: 12px 0 0;
+  color: #ff9b9b;
+  text-align: center;
+}

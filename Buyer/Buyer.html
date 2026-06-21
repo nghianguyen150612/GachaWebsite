@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cửa hàng - GachaWebsite</title>
+    <link rel="stylesheet" href="../CSS/Buyer.css">
+</head>
+<body>
+    <input class="tab-radio" type="radio" name="shop-tabs" id="tab-products" checked>
+    <input class="tab-radio" type="radio" name="shop-tabs" id="tab-cart">
+    <input class="tab-radio" type="radio" name="shop-tabs" id="tab-checkout">
+    
+    <div class="shop-window">
+        <aside class="sidebar">
+            <a class="brand" href="../MainPage/MainPage.html">Cửa hàng</a>
+            <nav aria-label="Điều hướng cửa hàng">
+                <a class="menu-item" href="../MainPage/MainPage.html">
+                    <span class="menu-icon" aria-hidden="true">🏠</span>
+                    <span class="menu-label">Trang chủ</span>
+                </a>
+                <label class="menu-item" for="tab-products">
+                    <span class="menu-icon" aria-hidden="true">SP</span>
+                    <span class="menu-label">Sản phẩm</span>
+                </label>
+                <label class="menu-item" for="tab-cart">
+                    <span class="menu-icon" aria-hidden="true">GH</span>
+                    <span class="menu-label">Giỏ hàng</span>
+                </label>
+                <label class="menu-item" for="tab-checkout">
+                    <span class="menu-icon" aria-hidden="true">TT</span>
+                    <span class="menu-label">Thanh toán</span>
+                </label>
+            </nav>
+        </aside>
+
+        <main class="shop-content">
+            <section class="hero">
+                <p class="eyebrow">BUYER</p>
+                <h1>Mua sắm online với giá cực hấp dẫn</h1>
+            </section>
+
+            <section id="products-tab" class="tab-content products-panel" aria-labelledby="ProductsTitle">
+                <div class="section-header">
+                    <div>
+                        <p class="eyebrow">Sản phẩm</p>
+                        <h2 id="ProductsTitle">Thiết bị điện tử</h2>
+                    </div>
+                </div>
+
+                <div class="product-grid">
+                    <article class="product-card">
+                        <div class="product-image"><img src="images/AttackSharkX11.jpeg" alt="Chuột Attack Shark X11"></div>
+                        <p class="product-category">Gaming</p>
+                        <h3>Chuột Attack Shark X11</h3>
+                        <p>Chuột gaming nhẹ, độ chính xác cao</p>
+                        <details>
+                            <summary>Chi tiết sản phẩm</summary>
+                            <p>Phù hợp chơi FPS, học tập và bàn làm việc gọn gàng.</p>
+                        </details>
+                        <div class="product-footer"><strong>$10</strong><button type="button" data-cart-button data-name="Chuột Attack Shark X11" data-price="10">Mua</button></div>
+                    </article>
+
+                    <article class="product-card">
+                        <div class="product-image"><img src="images/iPhone17ProMax.jpeg" alt="iPhone 17 Pro Max"></div>
+                        <p class="product-category">Điện thoại</p>
+                        <h3>iPhone 17 Pro Max</h3>
+                        <p>iPhone mới nhất cho trải nghiệm cao cấp hàng ngày.</p>
+                        <details>
+                            <summary>Chi tiết sản phẩm</summary>
+                            <p>Màn hình lớn, hiệu năng mạnh và camera cao cấp.</p>
+                        </details>
+                        <div class="product-footer"><strong>$1000</strong><button type="button" data-cart-button data-name="iPhone 17 Pro Max" data-price="1000">Mua</button></div>
+                    </article>
+
+                    <article class="product-card">
+                        <div class="product-image"><img src="images/ASUSTUFGamingA15.jpeg" alt="ASUS TUF Gaming A15"></div>
+                        <p class="product-category">Laptop</p>
+                        <h3>ASUS TUF Gaming A15</h3>
+                        <p>Laptop gaming hiệu năng cao.</p>
+                        <details>
+                            <summary>Chi tiết sản phẩm</summary>
+                            <p>Phù hợp chơi game, lập trình, chỉnh sửa và làm việc hàng ngày.</p>
+                        </details>
+                        <div class="product-footer"><strong>$900</strong><button type="button" data-cart-button data-name="ASUS TUF Gaming A15" data-price="900">Mua</button></div>
+                    </article>
+
+                    <article class="product-card">
+                        <div class="product-image"><img src="images/AirpodPro3.jpg" alt="AirPods Pro 3"></div>
+                        <p class="product-category">Âm thanh</p>
+                        <h3>AirPods Pro 3</h3>
+                        <p>Tai nghe không dây chống ồn chủ động</p>
+                        <details>
+                            <summary>Chi tiết sản phẩm</summary>
+                            <p>Tai nghe nhỏ gọn cho nghe nhạc, gọi điện và di chuyển.</p>
+                        </details>
+                        <div class="product-footer"><strong>$300</strong><button type="button" data-cart-button data-name="AirPods Pro 3" data-price="300">Mua</button></div>
+                    </article>
+
+                    <article class="product-card">
+                        <div class="product-image"><img src="images/LogitechG304.jpeg" alt="Chuột Logitech G304"></div>
+                        <p class="product-category">Chuột</p>
+                        <h3>Chuột Logitech G304</h3>
+                        <p>Chuột gaming không dây giá rẻ</p>
+                        <details>
+                            <summary>Chi tiết sản phẩm</summary>
+                            <p>Chuột không dây cho game thủ casual và công việc hàng ngày.</p>
+                        </details>
+                        <div class="product-footer"><strong>$15</strong><button type="button" data-cart-button data-name="Chuột Logitech G304" data-price="15">Mua</button></div>
+                    </article>
+
+                    <article class="product-card">
+                        <div class="product-image"><img src="images/AulaF75Max.jpeg" alt="Bàn phím cơ Aula F75 Max"></div>
+                        <p class="product-category">Bàn phím</p>
+                        <h3>Aula F75 Max</h3>
+                        <p>Bàn phím cơ không dây có đèn RGB</p>
+                        <details>
+                            <summary>Chi tiết sản phẩm</summary>
+                            <p>Layout compact, đèn RGB và switch mượt.</p>
+                        </details>
+                        <div class="product-footer"><strong>$25</strong><button type="button" data-cart-button data-name="Aula F75 Max" data-price="25">Mua</button></div>
+                    </article>
+
+                    <article class="product-card">
+                        <div class="product-image"><img src="images/OPPOReno8.jpeg" alt="OPPO Reno 8"></div>
+                        <p class="product-category">Điện thoại</p>
+                        <h3>OPPO Reno 8</h3>
+                        <p>Điện thoại Android</p>
+                        <details>
+                            <summary>Chi tiết sản phẩm</summary>
+                            <p>Điện thoại đơn giản cho lướt web, nhắn tin và chụp ảnh.</p>
+                        </details>
+                        <div class="product-footer"><strong>$800</strong><button type="button" data-cart-button data-name="OPPO Reno 8" data-price="800">Mua</button></div>
+                    </article>
+
+                    <article class="product-card">
+                        <div class="product-image"><img src="images/LenovoL27qe.jpg" alt="Màn hình Lenovo L27qe 27 inch"></div>
+                        <p class="product-category">Màn hình</p>
+                        <h3>Lenovo L27qe 27 inch</h3>
+                        <p>Màn hình gaming giá rẻ</p>
+                        <details>
+                            <summary>Chi tiết sản phẩm</summary>
+                            <p>Màn hình lớn cho game, học tập và làm việc.</p>
+                        </details>
+                        <div class="product-footer"><strong>$100</strong><button type="button" data-cart-button data-name="Lenovo L27qe 27 inch" data-price="100">Mua</button></div>
+                    </article>
+
+                    <article class="product-card">
+                        <div class="product-image"><img src="images/iPadProM1.jpeg" alt="iPad Pro M1"></div>
+                        <p class="product-category">Máy tính bảng</p>
+                        <h3>iPad Pro M1</h3>
+                        <p>Máy tính bảng mạnh mẽ, nhẹ cho công việc và sáng tạo</p>
+                        <details>
+                            <summary>Chi tiết sản phẩm</summary>
+                            <p>Tablet cho vẽ, viết, xem phim và chỉnh sửa.</p>
+                        </details>
+                        <div class="product-footer"><strong>$900</strong><button type="button" data-cart-button data-name="iPad Pro M1" data-price="900">Mua</button></div>
+                    </article>
+                </div>
+            </section>
+
+            <section id="cart-tab" class="tab-content panel" aria-labelledby="CartTitle">
+                <div class="section-header">
+                    <div>
+                        <p class="eyebrow">Giỏ hàng</p>
+                        <h2 id="CartTitle">Giỏ hàng của bạn</h2>
+                    </div>
+                    <button type="button" data-clear-cart>Xóa giỏ hàng</button>
+                </div>
+                <div id="cart-list" class="cart-list"></div>
+            </section>
+
+            <section id="checkout-tab" class="tab-content panel checkout-panel" aria-labelledby="CheckoutTitle">
+                <p class="eyebrow">Thanh toán</p>
+                <h2 id="CheckoutTitle">Tóm tắt đơn hàng</h2>
+                <div id="checkout-list" class="cart-list"></div>
+                <div class="cart-line total">
+                    <span>Tổng cộng</span>
+                    <strong id="checkout-total">$0</strong>
+                </div>
+                <button type="button" data-place-order>Đặt hàng</button>
+                <div class="success-message" id="orderSuccessMessage" role="status" aria-live="polite"></div>
+                <p class="note"> </p>
+            </section>
+
+            <footer class="app-footer">
+                <span>Cửa hàng</span>
+                <span>Được phát triển bởi Công Nghĩa & Khôi Nguyên</span>
+            </footer>
+        </main>
+    </div>
+
+    <script src="../Cart.js"></script>
+    <script src="Buyer.js"></script>
+</body>
+</html>
