@@ -114,8 +114,7 @@ nav {
   gap: 20px;
 }
 
-.hero,
-.panel {
+.hero {
   padding: 24px;
   background: #242424;
   border: 1px solid #383838;
